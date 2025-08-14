@@ -3,87 +3,536 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chill BGM - プライバシーポリシー</title>
+    <title>Chill BGM - Privacy Policy</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
         body {
-            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
             line-height: 1.6;
             color: #333;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
+            padding: 20px;
         }
-        .container {
+        
+        .language-selector {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .language-selector select {
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 25px;
+            border: none;
             background: white;
-            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            cursor: pointer;
+            outline: none;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
             padding: 40px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.2);
         }
+        
         h1 {
-            color: #667eea;
-            border-bottom: 3px solid #764ba2;
-            padding-bottom: 10px;
+            color: #2c3e50;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+            font-size: 28px;
         }
+        
         h2 {
-            color: #764ba2;
-            margin-top: 30px;
+            color: #34495e;
+            margin-top: 35px;
+            margin-bottom: 15px;
+            font-size: 20px;
         }
+        
+        h3 {
+            color: #34495e;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        
+        ul {
+            margin-left: 30px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
         .update-date {
-            color: #666;
-            font-size: 0.9em;
-            margin-bottom: 30px;
+            color: #7f8c8d;
+            font-size: 14px;
+            margin-bottom: 20px;
         }
-        .section {
-            margin-bottom: 25px;
+        
+        a {
+            color: #667eea;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        .footer {
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #e0e0e0;
+            text-align: center;
+            color: #7f8c8d;
+            font-size: 12px;
+        }
+        
+        .lang-content {
+            display: none;
+        }
+        
+        .lang-content.active {
+            display: block;
+        }
+        
+        /* RTL support for Arabic */
+        .rtl {
+            direction: rtl;
+            text-align: right;
+        }
+        
+        .rtl ul {
+            margin-right: 30px;
+            margin-left: 0;
+        }
+        
+        .rtl h1, .rtl h2, .rtl h3 {
+            text-align: right;
         }
     </style>
 </head>
 <body>
+    <div class="language-selector">
+        <select id="langSelect" onchange="changeLanguage()">
+            <option value="ja">日本語</option>
+            <option value="en">English</option>
+            <option value="zh">中文</option>
+            <option value="es">Español</option>
+            <option value="hi">हिन्दी</option>
+            <option value="pt">Português</option>
+            <option value="ar">العربية</option>
+        </select>
+    </div>
+
     <div class="container">
-        <h1>🎵 Chill BGM プライバシーポリシー</h1>
-        <div class="update-date">最終更新日: 2025年8月15日</div>
-        
-        <div class="section">
-            <h2>1. はじめに</h2>
-            <p>Chill BGMをご利用いただきありがとうございます。本アプリはユーザーのプライバシーを最優先に考えて設計されています。</p>
-        </div>
-
-        <div class="section">
-            <h2>2. 収集する情報</h2>
-            <p>本アプリは以下の情報を収集する場合があります：</p>
+        <!-- Japanese -->
+        <div id="ja" class="lang-content active">
+            <h1>プライバシーポリシー</h1>
+            <p class="update-date">最終更新日: 2025年8月11日</p>
+            
+            <p>Chill BGM - ねむねむジャズカフェ（以下、「本アプリ」）は、ユーザーのプライバシーを尊重し、個人情報の保護に努めています。</p>
+            
+            <h2>1. 収集する情報</h2>
+            <p>本アプリは、以下の情報を収集する場合があります：</p>
             <ul>
-                <li>アプリの使用状況に関する匿名の統計情報</li>
-                <li>デバイス情報（機種、OSバージョン）</li>
-                <li>お気に入りの楽曲設定（端末内のみで保存）</li>
+                <li><strong>広告識別子</strong>: Google AdMobを通じて、広告の表示と最適化のために使用されます</li>
+                <li><strong>デバイス情報</strong>: デバイスの種類、OSバージョン、アプリのバージョンなど</li>
+                <li><strong>使用状況データ</strong>: アプリの使用頻度、クラッシュレポートなど</li>
             </ul>
-        </div>
-
-        <div class="section">
-            <h2>3. 情報の利用目的</h2>
-            <p>収集した情報は以下の目的でのみ使用されます：</p>
+            
+            <h2>2. 情報の使用目的</h2>
+            <p>収集した情報は以下の目的で使用されます：</p>
             <ul>
-                <li>アプリの品質向上</li>
-                <li>ユーザー体験の改善</li>
+                <li>広告の表示と最適化</li>
+                <li>アプリの機能改善</li>
                 <li>技術的な問題の解決</li>
             </ul>
+            
+            <h2>3. 第三者サービス</h2>
+            <p>本アプリは以下の第三者サービスを使用しています：</p>
+            
+            <h3>Google AdMob</h3>
+            <p>本アプリは広告配信のためにGoogle AdMobを使用しています。Google AdMobは、ユーザーに関連性の高い広告を表示するために、特定の情報を収集する場合があります。</p>
+            <p>Googleのプライバシーポリシー: <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a></p>
+            
+            <h2>4. データの保存</h2>
+            <p>本アプリ自体は個人情報をサーバーに保存しません。すべての音楽データはアプリ内に含まれており、インターネット接続なしで使用できます。</p>
+            
+            <h2>5. 子供のプライバシー</h2>
+            <p>本アプリは13歳未満の子供から個人情報を意図的に収集することはありません。</p>
+            
+            <h2>6. セキュリティ</h2>
+            <p>私たちは、収集した情報を保護するために商業的に合理的な措置を講じていますが、インターネット上での送信方法や電子的な保存方法は100％安全ではないことをご理解ください。</p>
+            
+            <h2>7. プライバシーポリシーの変更</h2>
+            <p>本プライバシーポリシーは随時更新される場合があります。変更がある場合は、このページに掲載してお知らせします。</p>
+            
+            <h2>8. お問い合わせ</h2>
+            <p>本プライバシーポリシーに関するご質問がございましたら、以下までお問い合わせください：</p>
+            <p>メール: nisakegame@gmail.com</p>
+            
+            <div class="footer">
+                © 2025 Chill BGM - ねむねむジャズカフェ
+            </div>
         </div>
 
-        <div class="section">
-            <h2>4. 第三者への提供</h2>
-            <p>お客様の個人情報を第三者に販売、貸与、または開示することは一切ありません。</p>
+        <!-- English -->
+        <div id="en" class="lang-content">
+            <h1>Privacy Policy</h1>
+            <p class="update-date">Last Updated: August 11, 2025</p>
+            
+            <p>Chill BGM - Sleepy Jazz Cafe (hereinafter referred to as "the App") respects user privacy and is committed to protecting personal information.</p>
+            
+            <h2>1. Information We Collect</h2>
+            <p>The App may collect the following information:</p>
+            <ul>
+                <li><strong>Advertising Identifier</strong>: Used for displaying and optimizing advertisements through Google AdMob</li>
+                <li><strong>Device Information</strong>: Device type, OS version, app version, etc.</li>
+                <li><strong>Usage Data</strong>: App usage frequency, crash reports, etc.</li>
+            </ul>
+            
+            <h2>2. Use of Information</h2>
+            <p>The collected information is used for the following purposes:</p>
+            <ul>
+                <li>Displaying and optimizing advertisements</li>
+                <li>Improving app functionality</li>
+                <li>Resolving technical issues</li>
+            </ul>
+            
+            <h2>3. Third-Party Services</h2>
+            <p>The App uses the following third-party services:</p>
+            
+            <h3>Google AdMob</h3>
+            <p>The App uses Google AdMob for advertising delivery. Google AdMob may collect certain information to display relevant advertisements to users.</p>
+            <p>Google Privacy Policy: <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a></p>
+            
+            <h2>4. Data Storage</h2>
+            <p>The App itself does not store personal information on servers. All music data is included within the app and can be used without an internet connection.</p>
+            
+            <h2>5. Children's Privacy</h2>
+            <p>The App does not intentionally collect personal information from children under 13 years of age.</p>
+            
+            <h2>6. Security</h2>
+            <p>We take commercially reasonable measures to protect collected information, but please understand that no method of transmission over the Internet or electronic storage is 100% secure.</p>
+            
+            <h2>7. Changes to Privacy Policy</h2>
+            <p>This Privacy Policy may be updated from time to time. Any changes will be posted on this page.</p>
+            
+            <h2>8. Contact Us</h2>
+            <p>If you have any questions about this Privacy Policy, please contact us:</p>
+            <p>Email: nisakegame@gmail.com</p>
+            
+            <div class="footer">
+                © 2025 Chill BGM - Sleepy Jazz Cafe
+            </div>
         </div>
 
-        <div class="section">
-            <h2>5. お問い合わせ</h2>
-            <p>プライバシーポリシーに関するご質問がございましたら、アプリ内のお問い合わせフォームよりご連絡ください。</p>
+        <!-- Chinese -->
+        <div id="zh" class="lang-content">
+            <h1>隐私政策</h1>
+            <p class="update-date">最后更新日期：2025年8月11日</p>
+            
+            <p>Chill BGM - 睡眠爵士咖啡厅（以下简称"本应用"）尊重用户隐私并致力于保护个人信息。</p>
+            
+            <h2>1. 我们收集的信息</h2>
+            <p>本应用可能收集以下信息：</p>
+            <ul>
+                <li><strong>广告标识符</strong>：通过Google AdMob用于显示和优化广告</li>
+                <li><strong>设备信息</strong>：设备类型、操作系统版本、应用版本等</li>
+                <li><strong>使用数据</strong>：应用使用频率、崩溃报告等</li>
+            </ul>
+            
+            <h2>2. 信息使用目的</h2>
+            <p>收集的信息用于以下目的：</p>
+            <ul>
+                <li>显示和优化广告</li>
+                <li>改进应用功能</li>
+                <li>解决技术问题</li>
+            </ul>
+            
+            <h2>3. 第三方服务</h2>
+            <p>本应用使用以下第三方服务：</p>
+            
+            <h3>Google AdMob</h3>
+            <p>本应用使用Google AdMob进行广告投放。Google AdMob可能会收集某些信息以向用户显示相关广告。</p>
+            <p>Google隐私政策：<a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a></p>
+            
+            <h2>4. 数据存储</h2>
+            <p>本应用本身不会在服务器上存储个人信息。所有音乐数据都包含在应用内，无需互联网连接即可使用。</p>
+            
+            <h2>5. 儿童隐私</h2>
+            <p>本应用不会故意收集13岁以下儿童的个人信息。</p>
+            
+            <h2>6. 安全性</h2>
+            <p>我们采取商业上合理的措施来保护收集的信息，但请理解互联网传输或电子存储方法并非100%安全。</p>
+            
+            <h2>7. 隐私政策的变更</h2>
+            <p>本隐私政策可能会不时更新。任何变更都将在此页面上发布。</p>
+            
+            <h2>8. 联系我们</h2>
+            <p>如果您对本隐私政策有任何疑问，请联系我们：</p>
+            <p>电子邮件：nisakegame@gmail.com</p>
+            
+            <div class="footer">
+                © 2025 Chill BGM - 睡眠爵士咖啡厅
+            </div>
         </div>
 
-        <div class="section" style="text-align: center; margin-top: 50px; padding-top: 20px; border-top: 1px solid #eee;">
-            <p style="color: #999; font-size: 0.9em;">© 2025 Chill BGM. All rights reserved.</p>
-            <p style="color: #999; font-size: 0.8em;">Made with 💜 by GitHub MCP</p>
+        <!-- Spanish -->
+        <div id="es" class="lang-content">
+            <h1>Política de Privacidad</h1>
+            <p class="update-date">Última actualización: 11 de agosto de 2025</p>
+            
+            <p>Chill BGM - Café de Jazz para Dormir (en adelante, "la Aplicación") respeta la privacidad del usuario y se compromete a proteger la información personal.</p>
+            
+            <h2>1. Información que Recopilamos</h2>
+            <p>La Aplicación puede recopilar la siguiente información:</p>
+            <ul>
+                <li><strong>Identificador de Publicidad</strong>: Utilizado para mostrar y optimizar anuncios a través de Google AdMob</li>
+                <li><strong>Información del Dispositivo</strong>: Tipo de dispositivo, versión del SO, versión de la aplicación, etc.</li>
+                <li><strong>Datos de Uso</strong>: Frecuencia de uso de la aplicación, informes de fallos, etc.</li>
+            </ul>
+            
+            <h2>2. Uso de la Información</h2>
+            <p>La información recopilada se utiliza para los siguientes propósitos:</p>
+            <ul>
+                <li>Mostrar y optimizar anuncios</li>
+                <li>Mejorar la funcionalidad de la aplicación</li>
+                <li>Resolver problemas técnicos</li>
+            </ul>
+            
+            <h2>3. Servicios de Terceros</h2>
+            <p>La Aplicación utiliza los siguientes servicios de terceros:</p>
+            
+            <h3>Google AdMob</h3>
+            <p>La Aplicación utiliza Google AdMob para la entrega de publicidad. Google AdMob puede recopilar cierta información para mostrar anuncios relevantes a los usuarios.</p>
+            <p>Política de Privacidad de Google: <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a></p>
+            
+            <h2>4. Almacenamiento de Datos</h2>
+            <p>La Aplicación en sí no almacena información personal en servidores. Todos los datos de música están incluidos dentro de la aplicación y se pueden usar sin conexión a Internet.</p>
+            
+            <h2>5. Privacidad de los Niños</h2>
+            <p>La Aplicación no recopila intencionalmente información personal de niños menores de 13 años.</p>
+            
+            <h2>6. Seguridad</h2>
+            <p>Tomamos medidas comercialmente razonables para proteger la información recopilada, pero tenga en cuenta que ningún método de transmisión por Internet o almacenamiento electrónico es 100% seguro.</p>
+            
+            <h2>7. Cambios en la Política de Privacidad</h2>
+            <p>Esta Política de Privacidad puede actualizarse de vez en cuando. Cualquier cambio se publicará en esta página.</p>
+            
+            <h2>8. Contáctenos</h2>
+            <p>Si tiene alguna pregunta sobre esta Política de Privacidad, contáctenos:</p>
+            <p>Correo electrónico: nisakegame@gmail.com</p>
+            
+            <div class="footer">
+                © 2025 Chill BGM - Café de Jazz para Dormir
+            </div>
+        </div>
+
+        <!-- Hindi -->
+        <div id="hi" class="lang-content">
+            <h1>गोपनीयता नीति</h1>
+            <p class="update-date">अंतिम अपडेट: 11 अगस्त, 2025</p>
+            
+            <p>Chill BGM - स्लीपी जैज़ कैफे (इसके बाद "ऐप" के रूप में संदर्भित) उपयोगकर्ता की गोपनीयता का सम्मान करता है और व्यक्तिगत जानकारी की सुरक्षा के लिए प्रतिबद्ध है।</p>
+            
+            <h2>1. हम जो जानकारी एकत्र करते हैं</h2>
+            <p>ऐप निम्नलिखित जानकारी एकत्र कर सकता है:</p>
+            <ul>
+                <li><strong>विज्ञापन पहचानकर्ता</strong>: Google AdMob के माध्यम से विज्ञापन प्रदर्शित करने और अनुकूलित करने के लिए उपयोग किया जाता है</li>
+                <li><strong>डिवाइस की जानकारी</strong>: डिवाइस प्रकार, OS संस्करण, ऐप संस्करण, आदि</li>
+                <li><strong>उपयोग डेटा</strong>: ऐप उपयोग आवृत्ति, क्रैश रिपोर्ट, आदि</li>
+            </ul>
+            
+            <h2>2. जानकारी का उपयोग</h2>
+            <p>एकत्रित जानकारी का उपयोग निम्नलिखित उद्देश्यों के लिए किया जाता है:</p>
+            <ul>
+                <li>विज्ञापन प्रदर्शित करना और अनुकूलित करना</li>
+                <li>ऐप कार्यक्षमता में सुधार</li>
+                <li>तकनीकी समस्याओं का समाधान</li>
+            </ul>
+            
+            <h2>3. तृतीय-पक्ष सेवाएं</h2>
+            <p>ऐप निम्नलिखित तृतीय-पक्ष सेवाओं का उपयोग करता है:</p>
+            
+            <h3>Google AdMob</h3>
+            <p>ऐप विज्ञापन वितरण के लिए Google AdMob का उपयोग करता है। Google AdMob उपयोगकर्ताओं को प्रासंगिक विज्ञापन दिखाने के लिए कुछ जानकारी एकत्र कर सकता है।</p>
+            <p>Google गोपनीयता नीति: <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a></p>
+            
+            <h2>4. डेटा संग्रहण</h2>
+            <p>ऐप स्वयं सर्वर पर व्यक्तिगत जानकारी संग्रहीत नहीं करता है। सभी संगीत डेटा ऐप के भीतर शामिल है और इंटरनेट कनेक्शन के बिना उपयोग किया जा सकता है।</p>
+            
+            <h2>5. बच्चों की गोपनीयता</h2>
+            <p>ऐप जानबूझकर 13 वर्ष से कम उम्र के बच्चों से व्यक्तिगत जानकारी एकत्र नहीं करता है।</p>
+            
+            <h2>6. सुरक्षा</h2>
+            <p>हम एकत्रित जानकारी की सुरक्षा के लिए व्यावसायिक रूप से उचित उपाय करते हैं, लेकिन कृपया समझें कि इंटरनेट पर प्रसारण या इलेक्ट्रॉनिक भंडारण की कोई भी विधि 100% सुरक्षित नहीं है।</p>
+            
+            <h2>7. गोपनीयता नीति में परिवर्तन</h2>
+            <p>यह गोपनीयता नीति समय-समय पर अपडेट की जा सकती है। कोई भी परिवर्तन इस पृष्ठ पर पोस्ट किया जाएगा।</p>
+            
+            <h2>8. हमसे संपर्क करें</h2>
+            <p>यदि आपके पास इस गोपनीयता नीति के बारे में कोई प्रश्न है, तो कृपया हमसे संपर्क करें:</p>
+            <p>ईमेल: nisakegame@gmail.com</p>
+            
+            <div class="footer">
+                © 2025 Chill BGM - स्लीपी जैज़ कैफे
+            </div>
+        </div>
+
+        <!-- Portuguese -->
+        <div id="pt" class="lang-content">
+            <h1>Política de Privacidade</h1>
+            <p class="update-date">Última atualização: 11 de agosto de 2025</p>
+            
+            <p>Chill BGM - Café Jazz Sonolento (doravante referido como "o Aplicativo") respeita a privacidade do usuário e está comprometido em proteger informações pessoais.</p>
+            
+            <h2>1. Informações que Coletamos</h2>
+            <p>O Aplicativo pode coletar as seguintes informações:</p>
+            <ul>
+                <li><strong>Identificador de Publicidade</strong>: Usado para exibir e otimizar anúncios através do Google AdMob</li>
+                <li><strong>Informações do Dispositivo</strong>: Tipo de dispositivo, versão do SO, versão do aplicativo, etc.</li>
+                <li><strong>Dados de Uso</strong>: Frequência de uso do aplicativo, relatórios de falhas, etc.</li>
+            </ul>
+            
+            <h2>2. Uso das Informações</h2>
+            <p>As informações coletadas são usadas para os seguintes propósitos:</p>
+            <ul>
+                <li>Exibir e otimizar anúncios</li>
+                <li>Melhorar a funcionalidade do aplicativo</li>
+                <li>Resolver problemas técnicos</li>
+            </ul>
+            
+            <h2>3. Serviços de Terceiros</h2>
+            <p>O Aplicativo usa os seguintes serviços de terceiros:</p>
+            
+            <h3>Google AdMob</h3>
+            <p>O Aplicativo usa o Google AdMob para entrega de publicidade. O Google AdMob pode coletar certas informações para exibir anúncios relevantes aos usuários.</p>
+            <p>Política de Privacidade do Google: <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a></p>
+            
+            <h2>4. Armazenamento de Dados</h2>
+            <p>O Aplicativo em si não armazena informações pessoais em servidores. Todos os dados de música estão incluídos no aplicativo e podem ser usados sem conexão com a internet.</p>
+            
+            <h2>5. Privacidade das Crianças</h2>
+            <p>O Aplicativo não coleta intencionalmente informações pessoais de crianças menores de 13 anos.</p>
+            
+            <h2>6. Segurança</h2>
+            <p>Tomamos medidas comercialmente razoáveis para proteger as informações coletadas, mas entenda que nenhum método de transmissão pela Internet ou armazenamento eletrônico é 100% seguro.</p>
+            
+            <h2>7. Alterações na Política de Privacidade</h2>
+            <p>Esta Política de Privacidade pode ser atualizada periodicamente. Quaisquer alterações serão publicadas nesta página.</p>
+            
+            <h2>8. Entre em Contato</h2>
+            <p>Se você tiver alguma dúvida sobre esta Política de Privacidade, entre em contato:</p>
+            <p>Email: nisakegame@gmail.com</p>
+            
+            <div class="footer">
+                © 2025 Chill BGM - Café Jazz Sonolento
+            </div>
+        </div>
+
+        <!-- Arabic -->
+        <div id="ar" class="lang-content rtl">
+            <h1>سياسة الخصوصية</h1>
+            <p class="update-date">آخر تحديث: 11 أغسطس 2025</p>
+            
+            <p>Chill BGM - مقهى الجاز النعسان (يشار إليه فيما بعد بـ "التطبيق") يحترم خصوصية المستخدم ويلتزم بحماية المعلومات الشخصية.</p>
+            
+            <h2>1. المعلومات التي نجمعها</h2>
+            <p>قد يجمع التطبيق المعلومات التالية:</p>
+            <ul>
+                <li><strong>معرف الإعلان</strong>: يُستخدم لعرض وتحسين الإعلانات من خلال Google AdMob</li>
+                <li><strong>معلومات الجهاز</strong>: نوع الجهاز، إصدار نظام التشغيل، إصدار التطبيق، إلخ.</li>
+                <li><strong>بيانات الاستخدام</strong>: تكرار استخدام التطبيق، تقارير الأعطال، إلخ.</li>
+            </ul>
+            
+            <h2>2. استخدام المعلومات</h2>
+            <p>تُستخدم المعلومات المجمعة للأغراض التالية:</p>
+            <ul>
+                <li>عرض وتحسين الإعلانات</li>
+                <li>تحسين وظائف التطبيق</li>
+                <li>حل المشكلات التقنية</li>
+            </ul>
+            
+            <h2>3. خدمات الطرف الثالث</h2>
+            <p>يستخدم التطبيق خدمات الطرف الثالث التالية:</p>
+            
+            <h3>Google AdMob</h3>
+            <p>يستخدم التطبيق Google AdMob لتوصيل الإعلانات. قد يجمع Google AdMob معلومات معينة لعرض إعلانات ذات صلة للمستخدمين.</p>
+            <p>سياسة خصوصية Google: <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a></p>
+            
+            <h2>4. تخزين البيانات</h2>
+            <p>التطبيق نفسه لا يخزن المعلومات الشخصية على الخوادم. جميع بيانات الموسيقى مضمنة داخل التطبيق ويمكن استخدامها دون اتصال بالإنترنت.</p>
+            
+            <h2>5. خصوصية الأطفال</h2>
+            <p>لا يجمع التطبيق عن قصد معلومات شخصية من الأطفال دون سن 13 عامًا.</p>
+            
+            <h2>6. الأمان</h2>
+            <p>نتخذ تدابير معقولة تجاريًا لحماية المعلومات المجمعة، ولكن يرجى فهم أن أي طريقة نقل عبر الإنترنت أو تخزين إلكتروني ليست آمنة بنسبة 100٪.</p>
+            
+            <h2>7. التغييرات في سياسة الخصوصية</h2>
+            <p>قد يتم تحديث سياسة الخصوصية هذه من وقت لآخر. سيتم نشر أي تغييرات على هذه الصفحة.</p>
+            
+            <h2>8. اتصل بنا</h2>
+            <p>إذا كان لديك أي أسئلة حول سياسة الخصوصية هذه، يرجى الاتصال بنا:</p>
+            <p>البريد الإلكتروني: nisakegame@gmail.com</p>
+            
+            <div class="footer">
+                © 2025 Chill BGM - مقهى الجاز النعسان
+            </div>
         </div>
     </div>
+
+    <script>
+        function changeLanguage() {
+            const select = document.getElementById('langSelect');
+            const selectedLang = select.value;
+            
+            // Hide all language contents
+            const allContents = document.querySelectorAll('.lang-content');
+            allContents.forEach(content => {
+                content.classList.remove('active');
+            });
+            
+            // Show selected language content
+            const selectedContent = document.getElementById(selectedLang);
+            if (selectedContent) {
+                selectedContent.classList.add('active');
+            }
+            
+            // Update page language attribute
+            document.documentElement.lang = selectedLang;
+            
+            // Save preference to localStorage
+            localStorage.setItem('preferredLanguage', selectedLang);
+        }
+        
+        // Load saved language preference on page load
+        window.addEventListener('DOMContentLoaded', function() {
+            const savedLang = localStorage.getItem('preferredLanguage');
+            if (savedLang) {
+                document.getElementById('langSelect').value = savedLang;
+                changeLanguage();
+            }
+        });
+    </script>
 </body>
 </html>
